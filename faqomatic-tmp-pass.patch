@@ -1,16 +1,31 @@
 diff -urN _FAQ-OMatic-2.719/fom.PL FAQ-OMatic-2.719/fom.PL
 --- _FAQ-OMatic-2.719/fom.PL	2003-02-11 14:47:13.000000000 +0100
-+++ FAQ-OMatic-2.719/fom.PL	2003-07-29 12:54:56.000000000 +0200
-@@ -15,7 +15,7 @@
- $inc = (grep {m/^INSTALLSITELIB=/} @ARGV)[0] || '';
- $inc =~ s/^INSTALLSITELIB=// or die "fom.PL: INSTALLSITELIB= argument missing.\n";
++++ FAQ-OMatic-2.719/fom.PL	2003-07-29 15:13:52.000000000 +0200
+@@ -25,6 +25,10 @@
+ # both readable and executable, then we've reopened the window of
+ # trivial vulnerability for that site.
  
--my $temppass = FAQ::OMatic::Entropy::gatherRandomString();
-+my $temppass = 'PLD_1337_73mp_p455';
++open THEPASS, ">fom_pass.txt" or die "Writing \"pass\": $!";
++print THEPASS "$temppass\n";
++close THEPASS;
++
+ open THECGI, ">fom" or die "Writing \"fom\": $!";
+ print THECGI "#!$perl -wT\n";
+ print THECGI "use lib '.';			# for suid installations\n";
+@@ -35,9 +39,10 @@
+ ## Uncomment following two lines (and replace second argument for
+ ## setlocale()) if you want to use some locale, different from default.
  
- # now use md5 as a 128-bit version of the 56-bit crypt() we used to use.
- my $cryptpass = md5_hex($temppass);
-@@ -71,4 +71,3 @@
+-# use POSIX qw(locale_h);
++use POSIX qw(locale_h);
+ # $ENV{LANG} = 'ja_JP.EUC';
+-# POSIX::setlocale(LC_ALL, $ENV{LANG});
++# $ENV{LANG} = 'pl_PL.EUC';
++POSIX::setlocale(LC_ALL, $ENV{LANG});
+ 
+ use locale;
+ EOF
+@@ -71,4 +76,3 @@
  
  Press enter to continue.
  __EOF__
