@@ -1,0 +1,17 @@
+diff -urN _FAQ-OMatic-2.719/fom.PL FAQ-OMatic-2.719/fom.PL
+--- _FAQ-OMatic-2.719/fom.PL	2003-02-11 14:47:13.000000000 +0100
++++ FAQ-OMatic-2.719/fom.PL	2003-07-29 12:54:56.000000000 +0200
+@@ -15,7 +15,7 @@
+ $inc = (grep {m/^INSTALLSITELIB=/} @ARGV)[0] || '';
+ $inc =~ s/^INSTALLSITELIB=// or die "fom.PL: INSTALLSITELIB= argument missing.\n";
+ 
+-my $temppass = FAQ::OMatic::Entropy::gatherRandomString();
++my $temppass = 'PLD_1337_73mp_p455';
+ 
+ # now use md5 as a 128-bit version of the 56-bit crypt() we used to use.
+ my $cryptpass = md5_hex($temppass);
+@@ -71,4 +71,3 @@
+ 
+ Press enter to continue.
+ __EOF__
+-my $dummy = <STDIN>;
