@@ -4,7 +4,7 @@ Summary:	Faq-O-Matic - a CGI-based system that automates the process of maintain
 Summary(pl):	Faq-O-Matic - oparty o CGI system automatyzuj±cy proces utrzymywania FAQ
 Name:		FAQ-OMatic
 Version:	2.721
-Release:	1.1
+Release:	2
 License:	GPL
 Group:		Applications/WWW
 Source0:	http://dl.sourceforge.net/faqomatic/%{name}-%{version}.tar.gz
