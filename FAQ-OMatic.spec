@@ -1,7 +1,7 @@
 # TODO: webapp config
 %include	/usr/lib/rpm/macros.perl
 Summary:	Faq-O-Matic - a CGI-based system that automates the process of maintaining a FAQ
-Summary(pl):	Faq-O-Matic - oparty o CGI system automatyzuj±cy proces utrzymywania FAQ
+Summary(pl.UTF-8):   Faq-O-Matic - oparty o CGI system automatyzujÄ…cy proces utrzymywania FAQ
 Name:		FAQ-OMatic
 Version:	2.721
 Release:	2
@@ -29,12 +29,12 @@ visitors to your FAQ to take part in keeping it up-to-date. A
 permission system also makes it useful as a help-desk application,
 bug-tracking database, or documentation system.
 
-%description -l pl
-Faq-O-Matic to oparty o CGI system automatyzuj±cy proces utrzymywania
-FAQ (Frequently Asked Questions - listy najczê¶ciej zadawanych pytañ).
-Pozwala go¶ciom FAQ pomagaæ w uaktualnianiu go. Ma system uprawnieñ,
-dziêki czemu jest przydatny tak¿e jako aplikacja helpdeskowa, baza
-danych do ¶ledzenia b³êdów lub system dokumentacji.
+%description -l pl.UTF-8
+Faq-O-Matic to oparty o CGI system automatyzujÄ…cy proces utrzymywania
+FAQ (Frequently Asked Questions - listy najczÄ™Å›ciej zadawanych pytaÅ„).
+Pozwala goÅ›ciom FAQ pomagaÄ‡ w uaktualnianiu go. Ma system uprawnieÅ„,
+dziÄ™ki czemu jest przydatny takÅ¼e jako aplikacja helpdeskowa, baza
+danych do Å›ledzenia bÅ‚Ä™dÃ³w lub system dokumentacji.
 
 %prep
 %setup -q
