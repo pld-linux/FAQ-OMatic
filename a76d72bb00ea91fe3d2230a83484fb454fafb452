@@ -1,0 +1,5 @@
+- Added %post section with password information. Consider using non-fixed
+  password...
+- Added %{_httpdir}, so people can use it with multiple versions of httpd
+- Some cleanups
+- Now it really works ;)
